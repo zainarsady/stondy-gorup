@@ -32,8 +32,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push Docker image
-          uses: docker/build-push-action@v6
-          with:
+        uses: docker/build-push-action@v6
+        with:
           context: .
           file: ./WebApplication2/PipelineProcessor.API/Dockerfile
           push: true
