@@ -23,13 +23,6 @@
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql 
-        
-  pipeline-processor-api:
-    image: pipeline-processor-api
-    build:
-      context: .
-      dockerfile: PipelineProcessorAPI/Dockerfile
-    
 
 volumes:
   mysql_data:
