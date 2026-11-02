@@ -34,6 +34,13 @@ public class PipelinesController : ControllerBase
         _pipelineDbContext = pipelineDbContext;
     }
 
+    [HttpGet("Balls")]
+    public IActionResult GetBalls()
+    {
+        var balls = _pipelineDbContext.Pipelines.ToList();
+        return Ok(balls);
+    }
+    
     /// <summary>
     /// Registers a new pipeline: diameter, wall thickness, steel grade,
     /// strength, operating pressure and (optionally) its route on the map.
